@@ -1,0 +1,9 @@
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\GeoserverAutoPub.exe.config
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\GeoserverAutoPub.exe
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\GeoserverAutoPub.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.csprojResolveAssemblyReference.cache
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.Form1.resources
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.Properties.Resources.resources
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.csproj.GenerateResource.Cache
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.exe
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.pdb
