@@ -1,0 +1,15 @@
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\GeoserverAutoPub.exe.config
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\GeoserverAutoPub.exe
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\GeoserverAutoPub.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\Model.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\SqlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\XmlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\Model.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\SqlHelper.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Release\XmlHelper.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.csprojResolveAssemblyReference.cache
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.Properties.Resources.resources
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.csproj.GenerateResource.Cache
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.exe
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.MainForm.resources

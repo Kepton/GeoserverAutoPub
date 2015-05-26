@@ -7,3 +7,9 @@ D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\G
 D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.csproj.GenerateResource.Cache
 D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.exe
 D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Debug\GeoserverAutoPub.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\Model.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\SqlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\XmlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\Model.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\SqlHelper.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\bin\Debug\XmlHelper.pdb

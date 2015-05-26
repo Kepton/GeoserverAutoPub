@@ -1,0 +1,4 @@
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\XmlHelper\bin\Debug\XmlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\XmlHelper\bin\Debug\XmlHelper.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\XmlHelper\obj\Debug\XmlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\XmlHelper\obj\Debug\XmlHelper.pdb

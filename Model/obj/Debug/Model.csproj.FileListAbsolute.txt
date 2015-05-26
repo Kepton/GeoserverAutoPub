@@ -1,0 +1,7 @@
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\bin\Debug\Model.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\bin\Debug\Model.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\obj\Debug\Model.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\obj\Debug\Model.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\bin\Debug\XmlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\bin\Debug\XmlHelper.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

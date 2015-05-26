@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,8 @@ namespace GeoserverAutoPub
         public static string UserName = "";
 
         public static string Password = "";
+
+        public static Workspace WordsSpaceSelected = null;
 
     }
 }

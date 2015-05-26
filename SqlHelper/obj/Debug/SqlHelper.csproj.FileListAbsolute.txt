@@ -1,0 +1,5 @@
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\SqlHelper\bin\Debug\SqlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\SqlHelper\bin\Debug\SqlHelper.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\SqlHelper\obj\Debug\SqlHelper.dll
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\SqlHelper\obj\Debug\SqlHelper.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\SqlHelper\obj\Debug\SqlHelper.csprojResolveAssemblyReference.cache
