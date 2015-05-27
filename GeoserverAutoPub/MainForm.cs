@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using Model;
 using System.Xml;
+using System.Diagnostics;
 
 namespace GeoserverAutoPub
 {
@@ -138,6 +139,12 @@ namespace GeoserverAutoPub
             {
                 lbl_Msg.Text = "";
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string shutup = "D:\\Program Files (x86)\\GeoServer 2.6.3\\bin\\startup.bat";
+            Process.Start(shutup);
         }
     }
 }
