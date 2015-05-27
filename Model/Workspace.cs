@@ -33,6 +33,9 @@ namespace Model
         { 
             
         }
+
+
+
         public Workspace(string workspacepath)
         { 
             XmlDocument xmlDoc = new XmlDocument();
@@ -60,6 +63,41 @@ namespace Model
                 this.Prefix = PrefixNode.InnerText;
                 this.URI = UriNode.InnerText;
             }
+        }
+
+        /// <summary>
+        /// 根据添加的属性 生成workspace以及namespace 两个xml文件
+        /// </summary>
+        /// <param name="workspace"></param>
+        /// <param name="workspacepath"></param>
+        /// <param name="isDefult">是否默认</param>
+        public void SetAttribute(Workspace workspace,string workspacepath,bool isDefult)
+        {
+            /*<workspace>
+              <id>WorkspaceInfoImpl--68929cbb:14d9308effa:-8000</id>
+              <name>guangxi</name>
+            </workspace>*/
+             XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(workspacepath); //加载XML文档
+            XmlNode Node = xmlDoc.SelectSingleNode("workspace");
+            Node.ChildNodes[0].InnerText = workspace.ID;
+            Node.ChildNodes[1].InnerText = workspace.Name;
+            xmlDoc.Save(workspacepath);
+
+            //NamespaceInfoImpl--68929cbb:14d9308effa:-7fff
+            // WorkspaceInfoImpl--68929cbb:14d9308effa:-8000
+            /*<namespace>
+                  <id>NamespaceInfoImpl--68929cbb:14d9308effa:-7fff</id>
+                  <prefix>guangxi</prefix>
+                  <uri>www.guangxi.com</uri>
+                </namespace>*/
+            string namespacepath = workspacepath.Replace("workspace.xml", "namespace.xml");
+            xmlDoc.Load(namespacepath);
+            XmlNode npNode = xmlDoc.SelectSingleNode("namespace");
+            npNode.ChildNodes[0].InnerText = workspace.ID.Replace("WorkspaceInfoImpl", "NamespaceInfoImpl");
+            npNode.ChildNodes[1].InnerText = workspace.Name;
+            npNode.ChildNodes[2].InnerText = workspace.URI;
+            xmlDoc.Save(namespacepath);
         }
     }
 }

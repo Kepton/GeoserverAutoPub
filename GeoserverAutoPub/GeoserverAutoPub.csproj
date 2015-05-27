@@ -99,6 +99,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="XmlTemplet\DataStore\datastore.xml" />
+    <Content Include="XmlTemplet\Layer\featuretype.xml" />
+    <Content Include="XmlTemplet\Layer\layer.xml" />
     <Content Include="XmlTemplet\Workspace\namespace.xml" />
     <Content Include="XmlTemplet\Workspace\workspace.xml" />
   </ItemGroup>

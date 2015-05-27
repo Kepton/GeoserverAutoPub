@@ -5,3 +5,10 @@ D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\bin\Release\XmlHelper.
 D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\obj\Release\Model.dll
 D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\Model\obj\Release\Model.pdb
+D:\Work Document\GeoserverAutoPub\Model\bin\Release\Model.dll
+D:\Work Document\GeoserverAutoPub\Model\bin\Release\Model.pdb
+D:\Work Document\GeoserverAutoPub\Model\bin\Release\XmlHelper.dll
+D:\Work Document\GeoserverAutoPub\Model\bin\Release\XmlHelper.pdb
+D:\Work Document\GeoserverAutoPub\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\Work Document\GeoserverAutoPub\Model\obj\Release\Model.dll
+D:\Work Document\GeoserverAutoPub\Model\obj\Release\Model.pdb

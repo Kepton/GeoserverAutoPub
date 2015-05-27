@@ -1,0 +1,42 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--68929cbb:14d9308effa:-7ffd</id>
+  <name>LX_G</name>
+  <nativeName>LX_G</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--68929cbb:14d9308effa:-7fff</id>
+  </namespace>
+  <title>LX_G</title>
+  <keywords>
+    <string>features</string>
+    <string>LX_G</string>
+  </keywords>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>105.45009333333334</minx>
+    <maxx>111.94079500000001</maxx>
+    <miny>21.534012</miny>
+    <maxy>26.0973683333333</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>105.45009333333334</minx>
+    <maxx>111.94079500000001</maxx>
+    <miny>21.534012</miny>
+    <maxy>26.0973683333333</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--68929cbb:14d9308effa:-7ffe</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

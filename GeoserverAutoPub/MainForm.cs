@@ -90,5 +90,54 @@ namespace GeoserverAutoPub
         {
             SysParam.GeoserverDataPath = ConfigurationSettings.AppSettings["GeoserverPath"];
         }
+
+        private void btn_CreateWorkSpace_Click(object sender, EventArgs e)
+        {
+            string newName = txt_Name.Text.Trim();
+            Workspace existswp = getSelectedWPByName(newName);
+            if (existswp != null)
+            {
+                lbl_Msg.Text = "错误：当前工作区名已存在。";
+                return;
+            }
+            else
+            {
+                Workspace newwp = new Workspace();
+                newwp.ID ="WorkspaceInfoImpl--"+ System.Guid.NewGuid().ToString();
+                newwp.Name = newName;
+                newwp.Prefix = newName;
+                newwp.URI = txt_URI.Text.Trim();
+
+                wslist.Add(newwp);
+
+                SysParam.WordsSpaceSelected = newwp;
+
+                string newwppathstr = SysParam.GeoserverDataPath + "workspaces\\"+newName;
+                if (!Directory.Exists(newwppathstr))
+                {
+                    Directory.CreateDirectory(newwppathstr);
+                }
+
+                File.Copy(Application.StartupPath + "\\XmlTemplet\\Workspace\\namespace.xml", newwppathstr + "\\namespace.xml");
+                File.Copy(Application.StartupPath + "\\XmlTemplet\\Workspace\\workspace.xml", newwppathstr + "\\workspace.xml");
+
+                newwp.SetAttribute(newwp, newwppathstr + "\\workspace.xml", true);
+
+            }
+        }
+
+        private void txt_Name_Leave(object sender, EventArgs e)
+        {
+            string newName = txt_Name.Text.Trim();
+            Workspace existswp = getSelectedWPByName(newName);
+            if (existswp != null)
+            {
+                lbl_Msg.Text = "错误：当前工作区名已存在。";
+            }
+            else
+            {
+                lbl_Msg.Text = "";
+            }
+        }
     }
 }
