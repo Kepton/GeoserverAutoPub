@@ -70,8 +70,9 @@ namespace Model
         /// </summary>
         /// <param name="workspace"></param>
         /// <param name="workspacepath"></param>
+        ///  <param name="defaultxmlpath">default文件路径</param>
         /// <param name="isDefult">是否默认</param>
-        public void SetAttribute(Workspace workspace,string workspacepath,bool isDefult)
+        public void SetAttribute(Workspace workspace,string workspacepath,string defaultxmlpath,bool isDefult)
         {
             /*<workspace>
               <id>WorkspaceInfoImpl--68929cbb:14d9308effa:-8000</id>
@@ -98,6 +99,18 @@ namespace Model
             npNode.ChildNodes[1].InnerText = workspace.Name;
             npNode.ChildNodes[2].InnerText = workspace.URI;
             xmlDoc.Save(namespacepath);
+
+            //修改default文档
+            if (isDefult)
+            {
+                XmlDocument xmlDefaultDoc = new XmlDocument();
+                xmlDefaultDoc.Load(defaultxmlpath);
+                XmlNode DefaultNode = xmlDefaultDoc.SelectSingleNode("workspace");
+                DefaultNode.ChildNodes[0].InnerText = workspace.ID;
+                DefaultNode.ChildNodes[1].InnerText = workspace.Name;
+                xmlDefaultDoc.Save(defaultxmlpath);
+            }
+
         }
     }
 }
