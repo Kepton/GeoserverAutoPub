@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panWorking = new System.Windows.Forms.Panel();
-            this.btn_workspace = new System.Windows.Forms.Button();
-            this.btn_Store = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btn_Store = new System.Windows.Forms.Button();
+            this.btn_workspace = new System.Windows.Forms.Button();
+            this.panWorking = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,12 +48,33 @@
             this.panel1.Size = new System.Drawing.Size(939, 127);
             this.panel1.TabIndex = 0;
             // 
-            // panWorking
+            // button4
             // 
-            this.panWorking.Location = new System.Drawing.Point(1, 136);
-            this.panWorking.Name = "panWorking";
-            this.panWorking.Size = new System.Drawing.Size(948, 440);
-            this.panWorking.TabIndex = 1;
+            this.button4.Location = new System.Drawing.Point(626, 39);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(104, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Geoserver服务";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(437, 39);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "图层生成";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btn_Store
+            // 
+            this.btn_Store.Location = new System.Drawing.Point(284, 39);
+            this.btn_Store.Name = "btn_Store";
+            this.btn_Store.Size = new System.Drawing.Size(98, 23);
+            this.btn_Store.TabIndex = 1;
+            this.btn_Store.Text = "数据存储设置";
+            this.btn_Store.UseVisualStyleBackColor = true;
+            this.btn_Store.Click += new System.EventHandler(this.btn_Store_Click);
             // 
             // btn_workspace
             // 
@@ -65,33 +86,12 @@
             this.btn_workspace.UseVisualStyleBackColor = true;
             this.btn_workspace.Click += new System.EventHandler(this.btn_workspace_Click);
             // 
-            // btn_Store
+            // panWorking
             // 
-            this.btn_Store.Location = new System.Drawing.Point(284, 39);
-            this.btn_Store.Name = "btn_Store";
-            this.btn_Store.Size = new System.Drawing.Size(75, 23);
-            this.btn_Store.TabIndex = 1;
-            this.btn_Store.Text = "数据存储设置";
-            this.btn_Store.UseVisualStyleBackColor = true;
-            this.btn_Store.Click += new System.EventHandler(this.btn_Store_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(437, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(626, 39);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.panWorking.Location = new System.Drawing.Point(1, 136);
+            this.panWorking.Name = "panWorking";
+            this.panWorking.Size = new System.Drawing.Size(948, 440);
+            this.panWorking.TabIndex = 1;
             // 
             // MainForm
             // 

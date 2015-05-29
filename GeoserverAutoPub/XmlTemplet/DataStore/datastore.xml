@@ -1,6 +1,7 @@
 <dataStore>
   <id>DataStoreInfoImpl--68929cbb:14d9308effa:-7ffe</id>
   <name>guodao</name>
+  <description>guodaoshuoming</description>
   <type>Shapefile</type>
   <enabled>true</enabled>
   <workspace>
@@ -13,8 +14,8 @@
     <entry key="create spatial index">true</entry>
     <entry key="charset">ISO-8859-1</entry>
     <entry key="filetype">shapefile</entry>
-    <entry key="enable spatial index">true</entry>
     <entry key="cache and reuse memory maps">true</entry>
+    <entry key="enable spatial index">true</entry>
     <entry key="url">file://D:\shapeFiles\LX_G.shp</entry>
     <entry key="namespace">www.guangxi.com</entry>
   </connectionParameters>

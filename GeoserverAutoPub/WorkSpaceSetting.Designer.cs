@@ -192,7 +192,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WorkSpaceSetting";
-            this.Text = "Form1";
+            this.Text = "WorkspaceSetting";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

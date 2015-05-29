@@ -127,6 +127,8 @@ namespace GeoserverAutoPub
                     IsDefault = true;
                 newwp.SetAttribute(newwp, newwppathstr + "\\workspace.xml", SysParam.GeoserverDataPath + "workspaces\\default.xml", IsDefault);
 
+                Com_workspaceList.Items.Add(newName);
+                Com_workspaceList.SelectedText = newName;
             }
         }
 
