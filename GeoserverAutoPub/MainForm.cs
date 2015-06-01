@@ -18,7 +18,7 @@ namespace GeoserverAutoPub
 
         private void btn_workspace_Click(object sender, EventArgs e)
         {
-            ShowMainWorkForm(null, "编辑", typeof(WorkSpaceSetting));
+            ShowMainWorkForm(null, "WorkspaceSetting", typeof(WorkSpaceSetting));
         }
         public void ShowMainWorkForm(string sFixPath, string sCaption, Type formType)
         {
@@ -58,7 +58,7 @@ namespace GeoserverAutoPub
 
         private void btn_Store_Click(object sender, EventArgs e)
         {
-
+            ShowMainWorkForm(null, "StoreSetting", typeof(StoreSetting));
         }
     }
 }

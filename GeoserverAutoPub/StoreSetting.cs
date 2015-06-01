@@ -35,7 +35,6 @@ namespace GeoserverAutoPub
                 FileInfo[] files = workspacedict.GetFiles("datastore.xml");
                 foreach (FileInfo file in files)
                 {
-
                     com_storeslist.Items.Add("");
                 }
             }

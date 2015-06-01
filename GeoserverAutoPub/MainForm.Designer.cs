@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panCaiDan = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_Store = new System.Windows.Forms.Button();
             this.btn_workspace = new System.Windows.Forms.Button();
             this.panWorking = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panCaiDan.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panCaiDan
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.btn_Store);
-            this.panel1.Controls.Add(this.btn_workspace);
-            this.panel1.Location = new System.Drawing.Point(1, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(939, 127);
-            this.panel1.TabIndex = 0;
+            this.panCaiDan.Controls.Add(this.button4);
+            this.panCaiDan.Controls.Add(this.button3);
+            this.panCaiDan.Controls.Add(this.btn_Store);
+            this.panCaiDan.Controls.Add(this.btn_workspace);
+            this.panCaiDan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panCaiDan.Location = new System.Drawing.Point(0, 0);
+            this.panCaiDan.Name = "panCaiDan";
+            this.panCaiDan.Size = new System.Drawing.Size(952, 127);
+            this.panCaiDan.TabIndex = 0;
             // 
             // button4
             // 
@@ -88,9 +89,10 @@
             // 
             // panWorking
             // 
-            this.panWorking.Location = new System.Drawing.Point(1, 136);
+            this.panWorking.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panWorking.Location = new System.Drawing.Point(0, 127);
             this.panWorking.Name = "panWorking";
-            this.panWorking.Size = new System.Drawing.Size(948, 440);
+            this.panWorking.Size = new System.Drawing.Size(952, 454);
             this.panWorking.TabIndex = 1;
             // 
             // MainForm
@@ -99,17 +101,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 581);
             this.Controls.Add(this.panWorking);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panCaiDan);
             this.Name = "MainForm";
             this.Text = "MainForm";
-            this.panel1.ResumeLayout(false);
+            this.panCaiDan.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panCaiDan;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_Store;

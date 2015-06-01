@@ -135,7 +135,14 @@ namespace Model
             Node.ChildNodes[6].ChildNodes[0].InnerText = store.Memory_Mapped_Buffer;
             Node.ChildNodes[6].ChildNodes[1].InnerText = "Asia/Shanghai";
             Node.ChildNodes[6].ChildNodes[2].InnerText = "shape";
-            Node.ChildNodes[6].ChildNodes[3].InnerText = ;
+            Node.ChildNodes[6].ChildNodes[3].InnerText = store.Create_spatial_Index;
+            Node.ChildNodes[6].ChildNodes[4].InnerText = store.Charset;
+            Node.ChildNodes[6].ChildNodes[5].InnerText = "shpaefile";
+            Node.ChildNodes[6].ChildNodes[6].InnerText = store.Cache_and_Reuse_Memory_Maps;
+            Node.ChildNodes[6].ChildNodes[7].InnerText = store.Enable_Spatial_Index;
+            Node.ChildNodes[6].ChildNodes[8].InnerText = store.Url;
+            Node.ChildNodes[6].ChildNodes[9].InnerText = wp.URI;
+            Node.ChildNodes[7].InnerText = store.IsDefault;
 
             xmlDoc.Save(path);  
         }

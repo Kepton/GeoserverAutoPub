@@ -29,3 +29,4 @@ D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.
 D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.csproj.GenerateResource.Cache
 D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.exe
 D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.WorkSpaceSetting.resources
+D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.StoreSetting.resources
