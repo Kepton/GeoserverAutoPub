@@ -20,7 +20,7 @@ namespace GeoserverAutoPub
 
         private void StoreSetting_Load(object sender, EventArgs e)
         {
-            if (SysParam.WordsSpaceSelected != null)
+            if (SysParam.WordsSpaceSelected == null)
             {
                 MessageBox.Show("请先选择工作区");
                 return;
@@ -29,13 +29,17 @@ namespace GeoserverAutoPub
             lbl_selectedworkspacename.Text = SysParam.WordsSpaceSelected.Name;
 
             string[] diarr = Directory.GetDirectories(SysParam.GeoserverDataPath + "workspaces\\" + SysParam.WordsSpaceSelected.Name, "*", SearchOption.TopDirectoryOnly);
+            SysParam.ListStore = new List<Store>();
             foreach (string item in diarr)
             {
                 DirectoryInfo workspacedict = new DirectoryInfo(item);
                 FileInfo[] files = workspacedict.GetFiles("datastore.xml");
                 foreach (FileInfo file in files)
                 {
-                    com_storeslist.Items.Add("");
+                    string[] dir=item.Split('\\');
+                    com_storeslist.Items.Add(dir[dir.Length-1]);
+                    Store itemstore = new Store(file.FullName);
+                    SysParam.ListStore.Add(itemstore);
                 }
             }
         }

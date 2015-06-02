@@ -21,5 +21,7 @@ namespace GeoserverAutoPub
 
         public static Workspace WordsSpaceSelected = null;
 
+        public static List<Store> ListStore = null;
+
     }
 }
