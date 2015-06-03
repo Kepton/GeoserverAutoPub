@@ -35,20 +35,20 @@
             this.lbl_selectedworkspacename = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_storeName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txt_storedescription = new System.Windows.Forms.TextBox();
+            this.ckb_isenabled = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txt_shapepath = new System.Windows.Forms.TextBox();
+            this.btn_selectpath = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txt_dbf = new System.Windows.Forms.TextBox();
+            this.ckb_create_index = new System.Windows.Forms.CheckBox();
+            this.ckb_cache_memory_map = new System.Windows.Forms.CheckBox();
+            this.ckb_cache_reuse_memory = new System.Windows.Forms.CheckBox();
+            this.btn_addstore = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -114,12 +114,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "数据源名称：";
             // 
-            // textBox1
+            // txt_storeName
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 21);
-            this.textBox1.TabIndex = 7;
+            this.txt_storeName.Location = new System.Drawing.Point(103, 122);
+            this.txt_storeName.Name = "txt_storeName";
+            this.txt_storeName.Size = new System.Drawing.Size(188, 21);
+            this.txt_storeName.TabIndex = 7;
             // 
             // label5
             // 
@@ -130,22 +130,22 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "数据源说明：";
             // 
-            // textBox2
+            // txt_storedescription
             // 
-            this.textBox2.Location = new System.Drawing.Point(429, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 21);
-            this.textBox2.TabIndex = 9;
+            this.txt_storedescription.Location = new System.Drawing.Point(429, 121);
+            this.txt_storedescription.Name = "txt_storedescription";
+            this.txt_storedescription.Size = new System.Drawing.Size(188, 21);
+            this.txt_storedescription.TabIndex = 9;
             // 
-            // checkBox1
+            // ckb_isenabled
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(103, 157);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(54, 16);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = " 启用";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckb_isenabled.AutoSize = true;
+            this.ckb_isenabled.Location = new System.Drawing.Point(103, 157);
+            this.ckb_isenabled.Name = "ckb_isenabled";
+            this.ckb_isenabled.Size = new System.Drawing.Size(54, 16);
+            this.ckb_isenabled.TabIndex = 10;
+            this.ckb_isenabled.Text = " 启用";
+            this.ckb_isenabled.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -165,21 +165,22 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Shape文件位置：";
             // 
-            // textBox3
+            // txt_shapepath
             // 
-            this.textBox3.Location = new System.Drawing.Point(130, 226);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 21);
-            this.textBox3.TabIndex = 13;
+            this.txt_shapepath.Location = new System.Drawing.Point(130, 226);
+            this.txt_shapepath.Name = "txt_shapepath";
+            this.txt_shapepath.Size = new System.Drawing.Size(188, 21);
+            this.txt_shapepath.TabIndex = 13;
             // 
-            // button2
+            // btn_selectpath
             // 
-            this.button2.Location = new System.Drawing.Point(325, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "选择";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_selectpath.Location = new System.Drawing.Point(325, 226);
+            this.btn_selectpath.Name = "btn_selectpath";
+            this.btn_selectpath.Size = new System.Drawing.Size(75, 23);
+            this.btn_selectpath.TabIndex = 14;
+            this.btn_selectpath.Text = "选择";
+            this.btn_selectpath.UseVisualStyleBackColor = true;
+            this.btn_selectpath.Click += new System.EventHandler(this.btn_selectpath_Click);
             // 
             // label8
             // 
@@ -190,75 +191,76 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "DBF字符集：";
             // 
-            // textBox4
+            // txt_dbf
             // 
-            this.textBox4.Location = new System.Drawing.Point(568, 231);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 21);
-            this.textBox4.TabIndex = 16;
+            this.txt_dbf.Location = new System.Drawing.Point(568, 231);
+            this.txt_dbf.Name = "txt_dbf";
+            this.txt_dbf.Size = new System.Drawing.Size(188, 21);
+            this.txt_dbf.TabIndex = 16;
             // 
-            // checkBox2
+            // ckb_create_index
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(130, 276);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(324, 16);
-            this.checkBox2.TabIndex = 17;
-            this.checkBox2.Text = "如果缺少空间索引或者空间索引过时，重新建立空间索引";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ckb_create_index.AutoSize = true;
+            this.ckb_create_index.Checked = true;
+            this.ckb_create_index.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_create_index.Location = new System.Drawing.Point(130, 276);
+            this.ckb_create_index.Name = "ckb_create_index";
+            this.ckb_create_index.Size = new System.Drawing.Size(324, 16);
+            this.ckb_create_index.TabIndex = 17;
+            this.ckb_create_index.Text = "如果缺少空间索引或者空间索引过时，重新建立空间索引";
+            this.ckb_create_index.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // ckb_cache_memory_map
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(130, 309);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(144, 16);
-            this.checkBox3.TabIndex = 18;
-            this.checkBox3.Text = "使用内存映射的缓冲区";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ckb_cache_memory_map.AutoSize = true;
+            this.ckb_cache_memory_map.Location = new System.Drawing.Point(130, 309);
+            this.ckb_cache_memory_map.Name = "ckb_cache_memory_map";
+            this.ckb_cache_memory_map.Size = new System.Drawing.Size(144, 16);
+            this.ckb_cache_memory_map.TabIndex = 18;
+            this.ckb_cache_memory_map.Text = "使用内存映射的缓冲区";
+            this.ckb_cache_memory_map.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // ckb_cache_reuse_memory
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.Location = new System.Drawing.Point(130, 342);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(156, 16);
-            this.checkBox4.TabIndex = 19;
-            this.checkBox4.Text = "高速缓存和重用内存映射";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.ckb_cache_reuse_memory.AutoSize = true;
+            this.ckb_cache_reuse_memory.Checked = true;
+            this.ckb_cache_reuse_memory.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_cache_reuse_memory.Location = new System.Drawing.Point(130, 342);
+            this.ckb_cache_reuse_memory.Name = "ckb_cache_reuse_memory";
+            this.ckb_cache_reuse_memory.Size = new System.Drawing.Size(156, 16);
+            this.ckb_cache_reuse_memory.TabIndex = 19;
+            this.ckb_cache_reuse_memory.Text = "高速缓存和重用内存映射";
+            this.ckb_cache_reuse_memory.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_addstore
             // 
-            this.button3.Location = new System.Drawing.Point(31, 381);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 23);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "添加数据存储";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_addstore.Location = new System.Drawing.Point(31, 381);
+            this.btn_addstore.Name = "btn_addstore";
+            this.btn_addstore.Size = new System.Drawing.Size(156, 23);
+            this.btn_addstore.TabIndex = 20;
+            this.btn_addstore.Text = "添加数据存储";
+            this.btn_addstore.UseVisualStyleBackColor = true;
+            this.btn_addstore.Click += new System.EventHandler(this.btn_addstore_Click);
             // 
             // StoreSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 416);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.btn_addstore);
+            this.Controls.Add(this.ckb_cache_reuse_memory);
+            this.Controls.Add(this.ckb_cache_memory_map);
+            this.Controls.Add(this.ckb_create_index);
+            this.Controls.Add(this.txt_dbf);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.btn_selectpath);
+            this.Controls.Add(this.txt_shapepath);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ckb_isenabled);
+            this.Controls.Add(this.txt_storedescription);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_storeName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbl_selectedworkspacename);
@@ -283,19 +285,19 @@
         private System.Windows.Forms.Label lbl_selectedworkspacename;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_storeName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txt_storedescription;
+        private System.Windows.Forms.CheckBox ckb_isenabled;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt_shapepath;
+        private System.Windows.Forms.Button btn_selectpath;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txt_dbf;
+        private System.Windows.Forms.CheckBox ckb_create_index;
+        private System.Windows.Forms.CheckBox ckb_cache_memory_map;
+        private System.Windows.Forms.CheckBox ckb_cache_reuse_memory;
+        private System.Windows.Forms.Button btn_addstore;
     }
 }

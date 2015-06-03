@@ -1,22 +1,23 @@
 <dataStore>
-  <id>DataStoreInfoImpl--68929cbb:14d9308effa:-7ffe</id>
-  <name>guodao</name>
-  <type>Shapefile</type>
-  <enabled>true</enabled>
+  <id></id>
+  <name></name>
+  <description></description>
+  <type></type>
+  <enabled></enabled>
   <workspace>
-    <id>WorkspaceInfoImpl--68929cbb:14d9308effa:-8000</id>
+    <id></id>
   </workspace>
   <connectionParameters>
-    <entry key="memory mapped buffer">false</entry>
-    <entry key="timezone">Asia/Shanghai</entry>
-    <entry key="fstype">shape</entry>
-    <entry key="create spatial index">true</entry>
-    <entry key="charset">ISO-8859-1</entry>
-    <entry key="filetype">shapefile</entry>
-    <entry key="enable spatial index">true</entry>
-    <entry key="cache and reuse memory maps">true</entry>
-    <entry key="url">file://D:\shapeFiles\LX_G.shp</entry>
-    <entry key="namespace">www.guangxi.com</entry>
+    <entry key="memory mapped buffer"></entry>
+    <entry key="timezone"></entry>
+    <entry key="fstype"></entry>
+    <entry key="create spatial index"></entry>
+    <entry key="charset"></entry>
+    <entry key="filetype"></entry>
+    <entry key="cache and reuse memory maps"></entry>
+    <entry key="enable spatial index"></entry>
+    <entry key="url"></entry>
+    <entry key="namespace"></entry>
   </connectionParameters>
-  <__default>false</__default>
+  <__default></__default>
 </dataStore>
