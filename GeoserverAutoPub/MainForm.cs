@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -59,6 +60,15 @@ namespace GeoserverAutoPub
         private void btn_Store_Click(object sender, EventArgs e)
         {
             ShowMainWorkForm(null, "StoreSetting", typeof(StoreSetting));
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            SysParam.MinX = ConfigurationSettings.AppSettings["MinX"];
+            SysParam.MinY = ConfigurationSettings.AppSettings["MinY"];
+            SysParam.MaxX = ConfigurationSettings.AppSettings["MaxX"];
+            SysParam.MaxY = ConfigurationSettings.AppSettings["MaxY"];
+            SysParam.ZBX = ConfigurationSettings.AppSettings["ZBX"];
         }
     }
 }

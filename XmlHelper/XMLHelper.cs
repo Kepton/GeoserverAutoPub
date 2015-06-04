@@ -130,6 +130,94 @@ namespace XmlHelper
             return isSuccess;
         }
 
+        /// <summary>
+        /// 获取第二级节点的值
+        /// </summary>
+        /// <param name="Node">根节点</param>
+        /// <param name="Name">节点Name</param>
+        /// <returns>如果没找到返回为空；找到返回节点的innerText</returns>
+        public static string GetNodeValue(XmlNode Node,string Name)
+        {
+            string value = "";
+            foreach (XmlNode item in Node.ChildNodes)
+            {
+                if (item.Name.ToUpper() == Name.ToUpper())
+                {
+                    value = item.InnerText;
+                }
+            }
+            return value;  
+        }
+
+        /// <summary>
+        /// 获取第三级节点
+        /// </summary>
+        /// <param name="Node"></param>
+        /// <param name="FatherName"></param>
+        /// <param name="subName"></param>
+        /// <returns></returns>
+        public static string GetNodeValue(XmlNode Node, string FatherName,string subName)
+        {
+            string value = "";
+            foreach (XmlNode item in Node.ChildNodes)
+            {
+                if (item.Name.ToUpper() == FatherName.ToUpper())
+                {
+                    foreach (XmlNode subitem in item.ChildNodes)
+                    {
+                        if (subitem.Name.ToUpper() == subName.ToUpper())
+                        {
+                            value = subitem.InnerText;
+                        }
+                    }
+                }
+            }
+            return value;
+        }
+
+        /// <summary>
+        /// 根据节点名称修改节点内容
+        /// 针对第一级节点
+        /// </summary>
+        /// <param name="Node">根节点</param>
+        /// <param name="attributeName"></param>
+        /// <param name="Value"></param>
+        public static void SetAttributeValue(XmlNode Node, string attributeName, string Value)
+        {
+            foreach (XmlNode item in Node.ChildNodes)
+            {
+                if (item.Name.ToUpper() == attributeName.ToUpper())
+                {
+                    item.InnerText = Value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 根据节点名称修改节点内容
+        /// 针对第二级节点
+        /// </summary>
+        /// <param name="Node"></param>
+        /// <param name="FatherAttributeName"></param>
+        /// <param name="ChildAttributeName"></param>
+        /// <param name="Value"></param>
+        public static void SetAttributeValue(XmlNode Node, string FatherAttributeName,string ChildAttributeName, string Value)
+        {
+            foreach (XmlNode item in Node.ChildNodes)
+            {
+                if (item.Name.ToUpper() == FatherAttributeName.ToUpper())
+                {
+                    foreach (XmlNode subitem in item.ChildNodes)
+                    {
+                        if (subitem.Name.ToUpper() == ChildAttributeName.ToUpper())
+                        {
+                            subitem.InnerText = Value;
+                        }
+                    }
+                }
+            }
+        }
+
         ///<summary>
         /// 依据匹配XPath表达式的第一个节点来创建它的子节点(如果此节点已存在则追加一个新的同名节点
         ///</summary>

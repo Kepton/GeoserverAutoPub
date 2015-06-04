@@ -23,5 +23,16 @@ namespace GeoserverAutoPub
 
         public static List<Store> ListStore = null;
 
+
+        //最大最小经纬度
+        public static string MinX = "";
+        public static string MinY = "";
+        public static string MaxX = "";
+        public static string MaxY = "";
+
+        /// <summary>
+        /// 坐标系
+        /// </summary>
+        public static string ZBX = "";
     }
 }
