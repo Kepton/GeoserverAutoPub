@@ -197,6 +197,7 @@
             this.txt_dbf.Name = "txt_dbf";
             this.txt_dbf.Size = new System.Drawing.Size(188, 21);
             this.txt_dbf.TabIndex = 16;
+            this.txt_dbf.Text = "ISO-8859-1";
             // 
             // ckb_create_index
             // 

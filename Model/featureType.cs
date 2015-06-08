@@ -88,12 +88,12 @@ namespace Model
         /// 这个不知道什么意思
         /// </summary>
         public string LatLonBoundingBox_Crs = @"GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
-              DATUM[&quot;WGS84&quot;, &#xd;
-                SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
-              PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
-              UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
-              AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
-              AXIS[&quot;Geodetic latitude&quot;, NORTH]]";
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]";
 
         public string ProjectionPolicy = "";
 
@@ -135,7 +135,7 @@ namespace Model
             this.LatLonBoundingBox_MinY = XMLHelper.GetNodeValue(Node, "latLonBoundingBox", "miny");
             this.LatLonBoundingBox_MaxX = XMLHelper.GetNodeValue(Node, "latLonBoundingBox", "maxx");
             this.LatLonBoundingBox_MaxY = XMLHelper.GetNodeValue(Node, "latLonBoundingBox", "maxy");
-            this.LatLonBoundingBox_Crs = XMLHelper.GetNodeValue(Node, "latLonBoundingBox", "crs");
+            //this.LatLonBoundingBox_Crs = XMLHelper.GetNodeValue(Node, "latLonBoundingBox", "crs");
             this.ProjectionPolicy = XMLHelper.GetNodeValue(Node, "projectionPolicy");
             this.IsEnabled = XMLHelper.GetNodeValue(Node, "enabled");
             this.StoreID = XMLHelper.GetNodeValue(Node, "store", "id");
@@ -171,7 +171,13 @@ namespace Model
 
             XMLHelper.SetAttributeValue(Node, "projectionPolicy",  featuretype.ProjectionPolicy);
             XMLHelper.SetAttributeValue(Node, "enabled", featuretype.IsEnabled);
-            
+
+            XMLHelper.SetAttributeValue(Node, "store","id", store.ID);
+
+            XMLHelper.SetAttributeValue(Node, "maxFeatures", featuretype.maxFeatures);
+            XMLHelper.SetAttributeValue(Node, "numDecimals", featuretype.numDecimals);
+            XMLHelper.SetAttributeValue(Node, "overridingServiceSRS", featuretype.overridingServiceSRS);
+            XMLHelper.SetAttributeValue(Node, "circularArcPresent", featuretype.circularArcPresent);
 
             xmlDoc.Save(xmlpath);
         }

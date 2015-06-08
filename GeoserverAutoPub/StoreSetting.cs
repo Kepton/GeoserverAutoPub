@@ -96,8 +96,10 @@ namespace GeoserverAutoPub
            com_storeslist.Items.Add(StoreName);
 
            SysParam.ListStore.Add(newStore);
-           
 
+
+           AddFeatrueTypeAndLayer(newwppathstr, txt_shapepath.Text, newStore);
+           
 
 
 
@@ -107,20 +109,57 @@ namespace GeoserverAutoPub
         /// <summary>
         /// 
         /// </summary>
-        private void AddFeatrueType(string storepath,string Filename)
+        private void AddFeatrueTypeAndLayer(string storepath,string Filename,Store store)
         {
             string[] filenames = Filename.Split('\\');
-            string FileName = filenames[filenames.Length];
-            if (Directory.Exists(storepath + "\\" + Filename))
+            string tempFileName = filenames[filenames.Length-1].Substring(0,filenames[filenames.Length-1].LastIndexOf('.'));
+            if (!Directory.Exists(storepath + "\\" + tempFileName))
             {
-                Directory.CreateDirectory(storepath + "\\" + Filename);
+                Directory.CreateDirectory(storepath + "\\" + tempFileName);
             }
-           File.Copy(Application.StartupPath + "\\XmlTemplet\\Layer\\featuretype.xml", storepath + "\\datastore.xml");
+            File.Copy(Application.StartupPath + "\\XmlTemplet\\Layer\\featuretype.xml", storepath + "\\" + tempFileName + "\\featuretype.xml");
+           FeatureType feature = new FeatureType();
+           feature.ID = "FeatureTypeInfoImpl--" + Guid.NewGuid().ToString();
+           string[] tempfiles = txt_shapepath.Text.Split('\\');
+           feature.Name = tempfiles[tempfiles.Length-1].Substring(0,tempfiles[tempfiles.Length-1].LastIndexOf('.'));
+           feature.NativeName = feature.Name;
+           feature.NamespaceID = SysParam.WordsSpaceSelected.ID.Replace("WorkspaceInfoImpl", "NamespaceInfoImpl");
+           feature.Title = feature.Name;
+           feature.Srs = "EPSG:4326";
+           feature.NativeBoundingBox_MinX = SysParam.MinX;
+           feature.NativeBoundingBox_MinY = SysParam.MinY;
+           feature.NativeBoundingBox_MaxX = SysParam.MaxX;
+           feature.NativeBoundingBox_MaxY = SysParam.MaxY;
+
+           feature.LatLonBoundingBox_MinX = SysParam.MinX;
+           feature.LatLonBoundingBox_MinY = SysParam.MinY;
+           feature.LatLonBoundingBox_MaxX = SysParam.MaxX;
+           feature.LatLonBoundingBox_MaxY = SysParam.MaxY;
+
+           feature.ProjectionPolicy = "FORCE_DECLARED";
+           feature.IsEnabled = "true";
+           feature.StoreID = store.ID;
+           feature.maxFeatures = "0";
+           feature.numDecimals = "0";
+           feature.overridingServiceSRS = "false";
+           feature.circularArcPresent = "false";
+
+           feature.SetAttribut(SysParam.WordsSpaceSelected, store, feature, storepath + "\\" + tempFileName + "\\featuretype.xml");
+
+
+           File.Copy(Application.StartupPath + "\\XmlTemplet\\Layer\\layer.xml", storepath + "\\" + tempFileName + "\\layer.xml");
+
+           layer _layer = new layer();
+           _layer.Name = feature.Name;
+           _layer.ID = "LayerInfoImpl--" + Guid.NewGuid().ToString();
+           _layer.Type = "VECTOR";
+           _layer.DefaultStyle_ID = "StyleInfoImpl--570ae188:124761b8d78:-7fe3";
+           _layer.resource_ID = feature.ID;
+           _layer.Attribution_LogoWidth = "0";
+           _layer.Attribution_LogoHeight = "0";
+           _layer.SetAttribut(feature, storepath + "\\" + tempFileName + "\\layer.xml");
         }
-        private void AddLayer( )
-        {
- 
-        }
+
 
         private void btn_selectpath_Click(object sender, EventArgs e)
         {
