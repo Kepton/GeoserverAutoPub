@@ -30,3 +30,5 @@ D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.
 D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.exe
 D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.WorkSpaceSetting.resources
 D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.StoreSetting.resources
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.StoreSetting.resources
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.WorkSpaceSetting.resources

@@ -101,6 +101,25 @@ namespace GeoserverAutoPub
 
 
 
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void AddFeatrueType(string storepath,string Filename)
+        {
+            string[] filenames = Filename.Split('\\');
+            string FileName = filenames[filenames.Length];
+            if (Directory.Exists(storepath + "\\" + Filename))
+            {
+                Directory.CreateDirectory(storepath + "\\" + Filename);
+            }
+           File.Copy(Application.StartupPath + "\\XmlTemplet\\Layer\\featuretype.xml", storepath + "\\datastore.xml");
+        }
+        private void AddLayer( )
+        {
+ 
         }
 
         private void btn_selectpath_Click(object sender, EventArgs e)
