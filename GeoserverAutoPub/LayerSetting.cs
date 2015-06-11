@@ -44,7 +44,7 @@ namespace GeoserverAutoPub
             ExportData = AccessHelper.AccessHelper.ExecuteDataTable("select * from exportsetting where enable='1'");
             foreach (DataRow dr in ExportData.Rows)
             {
-                DataTable FieldTable = AccessHelper.AccessHelper.ExecuteDataTable("select * from exportfidld where shapeTable='"+dr["ShapeTable"].ToString()+"'");
+                DataTable FieldTable = AccessHelper.AccessHelper.ExecuteDataTable("select * from exportfield where shapeTable='"+dr["ShapeTable"].ToString()+"'");
                 StringBuilder select = new StringBuilder();
                 if (dr["Type"].ToString().ToUpper() == "POINT")
                 {
