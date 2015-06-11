@@ -1,0 +1,5 @@
+D:\Work Document\GeoserverAutoPub\AccessHelper\bin\x86\Release\AccessHelper.dll
+D:\Work Document\GeoserverAutoPub\AccessHelper\bin\x86\Release\AccessHelper.pdb
+D:\Work Document\GeoserverAutoPub\AccessHelper\obj\x86\Release\AccessHelper.csprojResolveAssemblyReference.cache
+D:\Work Document\GeoserverAutoPub\AccessHelper\obj\x86\Release\AccessHelper.dll
+D:\Work Document\GeoserverAutoPub\AccessHelper\obj\x86\Release\AccessHelper.pdb

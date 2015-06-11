@@ -1,0 +1,4 @@
+D:\Work Document\GeoserverAutoPub\SqlHelper\bin\x86\Release\SqlHelper.dll
+D:\Work Document\GeoserverAutoPub\SqlHelper\bin\x86\Release\SqlHelper.pdb
+D:\Work Document\GeoserverAutoPub\SqlHelper\obj\x86\Release\SqlHelper.dll
+D:\Work Document\GeoserverAutoPub\SqlHelper\obj\x86\Release\SqlHelper.pdb

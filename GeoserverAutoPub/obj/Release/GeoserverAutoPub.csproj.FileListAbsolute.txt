@@ -32,3 +32,6 @@ D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.
 D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.StoreSetting.resources
 D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.StoreSetting.resources
 D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.WorkSpaceSetting.resources
+D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\obj\Release\GeoserverAutoPub.LayerSetting.resources
+D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\bin\Release\AccessHelper.dll
+D:\Work Document\GeoserverAutoPub\GeoserverAutoPub\bin\Release\AccessHelper.pdb

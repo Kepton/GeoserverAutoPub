@@ -1,0 +1,4 @@
+D:\Work Document\GeoserverAutoPub\AccessHelper\bin\Release\AccessHelper.dll
+D:\Work Document\GeoserverAutoPub\AccessHelper\bin\Release\AccessHelper.pdb
+D:\Work Document\GeoserverAutoPub\AccessHelper\obj\Release\AccessHelper.dll
+D:\Work Document\GeoserverAutoPub\AccessHelper\obj\Release\AccessHelper.pdb

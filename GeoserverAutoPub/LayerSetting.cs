@@ -19,7 +19,7 @@ namespace GeoserverAutoPub
 
         private void btn_CreateShape_Click(object sender, EventArgs e)
         {
-
+            CreateShape();
         }
 
         #region 生成prj文件
@@ -35,7 +35,7 @@ namespace GeoserverAutoPub
 
         private void CreateShape()
         {
-            if (!Directory.Exists(SysParam.ShapeSettingPath))
+            if (!File.Exists(SysParam.ShapeSettingPath))
             {
                 MessageBox.Show("当前行政区划导出配置不存在！");
                 return;
@@ -61,13 +61,48 @@ namespace GeoserverAutoPub
                 }
 
                 select.Append(" from " + dr["SQLTable"].ToString());
-                select.Append(" where " + dr["Wherestr"].ToString());
+
+                if (dr["Wherestr"].ToString().Trim() != "")
+                {
+                    select.Append(" where " + dr["Wherestr"].ToString());
+                }
 
                 DataTable sqltable = SqlHelper.SQLHelper.ExecuteDataTable(CommandType.Text, select.ToString(), null);
 
                 if (dr["Type"].ToString().ToUpper() == "POINT")
                 {
+                    SaveShapeFile.SavePointShape sp = new SaveShapeFile.SavePointShape();
+                    sp.ShapePath = "D:\\";
+                    sp.ShapeFileName = dr["ShapeTable"].ToString();
+                    int iFieldNum = FieldTable.Rows.Count;
+                    sp.SetFiledNums(iFieldNum);
+                    foreach (DataRow fielddr in FieldTable.Rows)
+                    {
+                        string sFileName = fielddr["ShapeField"].ToString();
+                        byte iFieldType; byte iFieldSize; byte iFieldDec;
+                        if (fielddr["Type"].ToString().ToUpper() == "STRING")
+                        {
+                            iFieldType = 0x43;
+                        }
+                        else
+                        {
+                            iFieldType = 0x15;
+                        }
+                        iFieldSize = byte.Parse(fielddr["Length"].ToString());
+                        iFieldDec = byte.Parse(fielddr["xsdLength"].ToString());
 
+                        sp.AddFileDefine(sFileName, iFieldType, iFieldSize, iFieldDec);
+                    }
+                    foreach (DataRow fielddr in FieldTable.Rows)
+                    {
+                        string shapeField = fielddr["ShapeField"].ToString();
+                        foreach (DataRow sqldr in sqltable.Rows)
+                        {
+                            sp.SetFieldValue(shapeField, dr[shapeField].ToString());
+                        }
+                    }
+                   
+                    sp.Save();
                 }
                 else if (dr["Type"].ToString().ToUpper() == "LINE")
                 {

@@ -77,12 +77,12 @@ namespace GeoserverAutoPub
 
             SqlHelper.SQLHelper.connectionString = string.Format("server={0};uid={1};pwd={2};database={3}",SysParam.DataSource,SysParam.UserName,SysParam.Password,SysParam.DataBase);
             SysParam.ShapeSettingPath = Application.StartupPath + "\\ShapeSetting\\" + ConfigurationSettings.AppSettings["CurrentXZQH"] + "\\ShapeExportSetting.mdb";
-            AccessHelper.AccessHelper.connstring = "Provider=Mirosoft.Jet.OleDb.4.0;Data Source="+SysParam.ShapeSettingPath;
+            AccessHelper.AccessHelper.connstring = "Provider=Microsoft.Jet.OleDb.4.0;Data Source=" + SysParam.ShapeSettingPath;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ShowMainWorkForm(null, "StoreSetting", typeof(StoreSetting));
+            ShowMainWorkForm(null, "LayerSetting", typeof(LayerSetting));
         }
     }
 }

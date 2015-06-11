@@ -1,0 +1,23 @@
+<dataStore>
+  <id></id>
+  <name></name>
+  <description></description>
+  <type></type>
+  <enabled></enabled>
+  <workspace>
+    <id></id>
+  </workspace>
+  <connectionParameters>
+    <entry key="memory mapped buffer"></entry>
+    <entry key="timezone"></entry>
+    <entry key="fstype"></entry>
+    <entry key="create spatial index"></entry>
+    <entry key="charset"></entry>
+    <entry key="filetype"></entry>
+    <entry key="cache and reuse memory maps"></entry>
+    <entry key="enable spatial index"></entry>
+    <entry key="url"></entry>
+    <entry key="namespace"></entry>
+  </connectionParameters>
+  <__default></__default>
+</dataStore>
