@@ -13,12 +13,6 @@ namespace GeoserverAutoPub
         /// </summary>
         public static string GeoserverDataPath = "";
 
-        public static string DataSource = "";
-
-        public static string UserName = "";
-
-        public static string Password = "";
-
         public static Workspace WordsSpaceSelected = null;
 
         public static List<Store> ListStore = null;
@@ -34,5 +28,20 @@ namespace GeoserverAutoPub
         /// 坐标系
         /// </summary>
         public static string ZBX = "";
+
+
+
+        /// <summary>
+        /// 远程数据连接
+        /// </summary>
+        public static string DataSource = "";
+        public static string UserName = "";
+        public static string Password = "";
+        public static string DataBase = "";
+
+        public static string CurrentXZQH = "";
+        public static string ShapeSettingPath = "";
+
+        
     }
 }

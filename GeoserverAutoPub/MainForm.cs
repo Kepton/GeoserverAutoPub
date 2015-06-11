@@ -69,6 +69,20 @@ namespace GeoserverAutoPub
             SysParam.MaxX = ConfigurationSettings.AppSettings["MaxX"];
             SysParam.MaxY = ConfigurationSettings.AppSettings["MaxY"];
             SysParam.ZBX = ConfigurationSettings.AppSettings["ZBX"];
+
+            SysParam.DataSource = ConfigurationSettings.AppSettings["DataSource"];
+            SysParam.DataBase=ConfigurationSettings.AppSettings["DataBase"];
+            SysParam.UserName = ConfigurationSettings.AppSettings["UserName"];
+            SysParam.Password = ConfigurationSettings.AppSettings["Password"];
+
+            SqlHelper.SQLHelper.connectionString = string.Format("server={0};uid={1};pwd={2};database={3}",SysParam.DataSource,SysParam.UserName,SysParam.Password,SysParam.DataBase);
+            SysParam.ShapeSettingPath = Application.StartupPath + "\\ShapeSetting\\" + ConfigurationSettings.AppSettings["CurrentXZQH"] + "\\ShapeExportSetting.mdb";
+            AccessHelper.AccessHelper.connstring = "Provider=Mirosoft.Jet.OleDb.4.0;Data Source="+SysParam.ShapeSettingPath;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ShowMainWorkForm(null, "StoreSetting", typeof(StoreSetting));
         }
     }
 }

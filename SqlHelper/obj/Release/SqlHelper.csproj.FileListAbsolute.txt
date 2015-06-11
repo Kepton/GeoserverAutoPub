@@ -7,3 +7,4 @@ D:\Work Document\GeoserverAutoPub\SqlHelper\bin\Release\SqlHelper.pdb
 D:\Work Document\GeoserverAutoPub\SqlHelper\obj\Release\SqlHelper.csprojResolveAssemblyReference.cache
 D:\Work Document\GeoserverAutoPub\SqlHelper\obj\Release\SqlHelper.dll
 D:\Work Document\GeoserverAutoPub\SqlHelper\obj\Release\SqlHelper.pdb
+D:\Work Documents\GeoserverAutoPub\GeoserverAutoPub\SqlHelper\obj\Release\SqlHelper.csprojResolveAssemblyReference.cache

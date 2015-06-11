@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace GeoserverAutoPub
+{
+    public partial class LayerSetting : Form
+    {
+        public LayerSetting()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_CreateShape_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #region 生成prj文件
+        private void BuildPrj(string fileName)
+        {
+            string str = "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"degree\",0.0174532925199433],METADATA[\"World\",-180.0,-90.0,180.0,90.0,0.0,0.0174532925199433,0.0,1262]]";
+            FileStream fs = new FileStream("D:\\Work Documents\\Test" + "\\" + fileName + ".prj", FileMode.Create, FileAccess.ReadWrite);
+            byte[] bytes = Encoding.Default.GetBytes(str);
+            fs.Write(bytes, 0, bytes.Length);
+            fs.Close();
+        }
+        #endregion
+
+        private void CreateShape()
+        {
+            if (!Directory.Exists(SysParam.ShapeSettingPath))
+            {
+                MessageBox.Show("当前行政区划导出配置不存在！");
+                return;
+            }
+            DataTable ExportData = new DataTable();
+            ExportData = AccessHelper.AccessHelper.ExecuteDataTable("select * from exportsetting where enable='1'");
+            foreach (DataRow dr in ExportData.Rows)
+            {
+                DataTable FieldTable = AccessHelper.AccessHelper.ExecuteDataTable("select * from exportfidld where shapeTable='"+dr["ShapeTable"].ToString()+"'");
+                StringBuilder select = new StringBuilder();
+                if (dr["Type"].ToString().ToUpper() == "POINT")
+                {
+                    select.Append("select ptx,pty");
+
+                }
+                else if (dr["Type"].ToString().ToUpper() == "LINE")
+                {
+                    select.Append("select shape");
+                }
+                foreach (DataRow fielddr in FieldTable.Rows)
+                {
+                    select.Append("," + fielddr["SQLField"].ToString() + " as " + fielddr["ShapeField"].ToString());
+                }
+
+                select.Append(" from " + dr["SQLTable"].ToString());
+                select.Append(" where " + dr["Wherestr"].ToString());
+
+                DataTable sqltable = SqlHelper.SQLHelper.ExecuteDataTable(CommandType.Text, select.ToString(), null);
+
+                if (dr["Type"].ToString().ToUpper() == "POINT")
+                {
+
+                }
+                else if (dr["Type"].ToString().ToUpper() == "LINE")
+                {
+                 
+                }
+
+            }
+        }
+    }
+}
