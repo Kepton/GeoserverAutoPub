@@ -86,27 +86,86 @@ namespace GeoserverAutoPub
                         }
                         else
                         {
-                            iFieldType = 0x15;
+                            iFieldType = 0x4e;
                         }
                         iFieldSize = byte.Parse(fielddr["Length"].ToString());
                         iFieldDec = byte.Parse(fielddr["xsdLength"].ToString());
 
                         sp.AddFileDefine(sFileName, iFieldType, iFieldSize, iFieldDec);
                     }
-                    foreach (DataRow fielddr in FieldTable.Rows)
+
+                    foreach (DataRow sqldr in sqltable.Rows)
                     {
-                        string shapeField = fielddr["ShapeField"].ToString();
-                        foreach (DataRow sqldr in sqltable.Rows)
+                        foreach (DataRow fielddr in FieldTable.Rows)
                         {
-                            sp.SetFieldValue(shapeField, dr[shapeField].ToString());
+                            string shapeField = fielddr["ShapeField"].ToString();
+                            sp.SetFieldValue(shapeField, sqldr[shapeField].ToString());
                         }
+                        if (sqldr["ptx"] == DBNull.Value || sqldr["pty"] == DBNull.Value)
+                            continue;
+                        //保存图形
+                        sp.AddXY(Convert.ToDouble(sqldr["ptx"].ToString()), Convert.ToDouble(sqldr["pty"].ToString()));
+                        sp.Update();
                     }
                    
                     sp.Save();
                 }
                 else if (dr["Type"].ToString().ToUpper() == "LINE")
                 {
-                 
+                    SaveShapeFile.SaveLineShape sa = new SaveShapeFile.SaveLineShape();
+                    sa.ShapePath = "D:\\";
+                    sa.ShapeFileName = dr["ShapeTable"].ToString();
+                    int iFieldNum = FieldTable.Rows.Count;
+                    sa.SetFiledNums(iFieldNum);
+
+                    foreach (DataRow fielddr in FieldTable.Rows)
+                    {
+                        string sFileName = fielddr["ShapeField"].ToString();
+                        byte iFieldType; byte iFieldSize; byte iFieldDec;
+                        if (fielddr["Type"].ToString().ToUpper() == "STRING")
+                        {
+                            iFieldType = 0x43;
+                        }
+                        else
+                        {
+                            iFieldType = 0x4e;
+                        }
+                        iFieldSize = byte.Parse(fielddr["Length"].ToString());
+                        iFieldDec = byte.Parse(fielddr["xsdLength"].ToString());
+
+                        sa.AddFileDefine(sFileName, iFieldType, iFieldSize, iFieldDec);
+                    }
+                    foreach (DataRow sqldr in sqltable.Rows)
+                    {
+                        foreach (DataRow fielddr in FieldTable.Rows)
+                        {
+                            string shapeField = fielddr["ShapeField"].ToString();
+                            sa.SetFieldValue(shapeField, sqldr[shapeField].ToString());
+                        }
+                        if (sqldr["shape"] == DBNull.Value)
+                            continue;
+
+                        byte[] bytes = (byte[])sqldr["Shape"];
+                        HDLine.HDMeasureLine pLine = new HDLine.HDMeasureLine();
+                        pLine.BytesToLine(bytes);
+
+                        for (int i = 0; i < pLine.Parts.Count; i++)
+                        {
+                            List<HDLine.HDPoint> lstPoints = pLine.Parts[i];
+                            List<SaveShapeFile.XYCoordinate> lstCooridnate = new List<SaveShapeFile.XYCoordinate>();
+                            for (int j = 0; j < lstPoints.Count; j++)
+                            {
+                                SaveShapeFile.XYCoordinate item = new SaveShapeFile.XYCoordinate();
+                                item.x = lstPoints[j].X;
+                                item.y = lstPoints[j].Y;
+                                lstCooridnate.Add(item);
+                            }
+                            sa.AddParts(lstCooridnate);
+                        }
+                      
+                        sa.Update();
+                    }
+                    sa.Save();
                 }
 
             }
