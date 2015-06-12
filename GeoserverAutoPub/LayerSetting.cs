@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GeoserverAutoPub
 {
     public partial class LayerSetting : Form
     {
+        private Thread mession = null;
         public LayerSetting()
         {
             InitializeComponent();
@@ -169,6 +172,20 @@ namespace GeoserverAutoPub
                 }
 
             }
+        }
+
+        private void Work()
+        {
+            DateTime lasttiem=DateTime.Parse( ConfigurationSettings.AppSettings["2015-06-01"]);
+            if (DateTime.Now.DayOfWeek != lasttiem.DayOfWeek)//上一次导出时间与当前时间不在同一周  则重新导出
+            {
+ 
+            }
+        }
+
+        private void btn_Start_Click(object sender, EventArgs e)
+        {
+            //mession=new Thread()
         }
     }
 }
