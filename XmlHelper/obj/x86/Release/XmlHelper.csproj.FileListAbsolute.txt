@@ -2,3 +2,4 @@ D:\Work Document\GeoserverAutoPub\XmlHelper\bin\x86\Release\XmlHelper.dll
 D:\Work Document\GeoserverAutoPub\XmlHelper\bin\x86\Release\XmlHelper.pdb
 D:\Work Document\GeoserverAutoPub\XmlHelper\obj\x86\Release\XmlHelper.dll
 D:\Work Document\GeoserverAutoPub\XmlHelper\obj\x86\Release\XmlHelper.pdb
+D:\Work Document\GeoserverAutoPub\XmlHelper\obj\x86\Release\XmlHelper.csprojResolveAssemblyReference.cache

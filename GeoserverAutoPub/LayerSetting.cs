@@ -176,7 +176,7 @@ namespace GeoserverAutoPub
 
         private void Work()
         {
-            DateTime lasttiem=DateTime.Parse( ConfigurationSettings.AppSettings["2015-06-01"]);
+            DateTime lasttiem = DateTime.Parse(ConfigurationSettings.AppSettings["LastExportDate"]);
             if (DateTime.Now.DayOfWeek != lasttiem.DayOfWeek)//上一次导出时间与当前时间不在同一周  则重新导出
             {
  
